@@ -5,6 +5,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const userRoutes = require("./routes/user");
+const sauceRoutes = require("./routes/sauce")
 
 mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@piquante.j011u.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
     {
@@ -23,5 +24,7 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 app.use("/api/auth", userRoutes);
+app.use("/api/sauces", sauceRoutes);
+app.use(express.static(path.join(__dirname, "images")));
 
 module.exports = app;
