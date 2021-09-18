@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
 const dotenv = require("dotenv");
 dotenv.config();
 
@@ -22,7 +21,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use(bodyParser.json());
+app.use(express.json());
 app.use("/api/auth", userRoutes);
 
 module.exports = app;
