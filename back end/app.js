@@ -3,8 +3,10 @@ const app = express();
 const mongoose = require('mongoose');
 const dotenv = require("dotenv");
 dotenv.config();
+const path = require("path");
 
 const userRoutes = require("./routes/user");
+const sauceRoutes = require("./routes/sauce")
 
 mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@piquante.j011u.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
     {
@@ -21,7 +23,10 @@ app.use((req, res, next) => {
     next();
 });
 
+app.use('/images', express.static(path.join(__dirname, 'images')));
 app.use(express.json());
 app.use("/api/auth", userRoutes);
+app.use("/api/sauces", sauceRoutes);
+
 
 module.exports = app;

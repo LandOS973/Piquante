@@ -28,7 +28,7 @@ exports.login = (req, res, next) => {
                 return res.status(401).json({error: "mauvais mdp !"})
             }
             res.status(200).json({
-                userId: user.id,
+                userId: user._id,
                 token: jwt.sign(
                     {userId:user._id},
                     process.env.ACCESS_TOKEN,
