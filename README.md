@@ -14,10 +14,13 @@ Prerequis : Pour faire fonctionner ce projet, vous avez besoin de Node et npm d'
 
 Installation:
 
-Clonez ce dépot.
+Clonez ce dépot avec cette ligne de commande : git clone https://github.com/ThomasL9731/Piquante.git
+
 Lancez un terminal dans le dossier "front end" puis executer les commandes suivantes :
 - npm install
 - npm start
+
+
 Lancez un autre terminal dans le dossier "back end" puis executer les commandes suivantes :
 - npm install
 - node .\server.js
