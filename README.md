@@ -1,6 +1,6 @@
 <strong>Projet 6 Openclassroom : hot takes</strong>
 
-Orinoco est un site d'ecommerce de vente d'ours en peluche.
+Hot takes est une application web de critique des sauces piquantes
 
 Technologies utilisées: HTML, CSS, JavaScript, NodeJs, Express.
 
