@@ -6,7 +6,7 @@ dotenv.config();
 const path = require("path");
 
 const userRoutes = require("./routes/user");
-const sauceRoutes = require("./routes/sauce")
+const sauceRoutes = require("./routes/sauce");
 
 mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@piquante.j011u.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
     {
