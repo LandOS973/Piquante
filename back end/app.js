@@ -1,10 +1,12 @@
 const express = require("express");
+const helmet = require("helmet");
 const app = express();
 const mongoose = require('mongoose');
 const dotenv = require("dotenv");
 dotenv.config();
 const path = require("path");
 
+app.use(helmet());
 const userRoutes = require("./routes/user");
 const sauceRoutes = require("./routes/sauce");
 
