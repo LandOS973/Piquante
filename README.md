@@ -25,5 +25,6 @@ Lancez un autre terminal dans le dossier "back end" puis executer les commandes 
 - npm install
 - node .\server.js
 
-Port utilisé pour le front end :  port 8081
-Port utilisé pour le back end : port 3000
+Port utilisé pour le front end :  8081
+
+Port utilisé pour le back end : 3000
