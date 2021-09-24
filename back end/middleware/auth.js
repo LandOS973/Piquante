@@ -11,6 +11,6 @@ module.exports = (req,res,next) => {
             next();
         }
     }catch(e){
-        res.status(401).json({error:e | "Requête non authentifiée ! "});
+        res.status(401).json({error:'Invalid request!'});
     }
 }
